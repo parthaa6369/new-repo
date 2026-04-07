@@ -34,7 +34,7 @@ stages {
     stage('Run New Container') {
         steps {
             script {
-                sh "docker run -d -p 3000:80 --name $CONTAINER_NAME $IMAGE_NAME"
+                sh "docker run -d -p 3001:80 --name $CONTAINER_NAME $IMAGE_NAME"
             }
         }
     }
@@ -42,7 +42,7 @@ stages {
 
 post {
     success {
-        echo "App running on port 3000 🚀"
+        echo "App running on port 3001 🚀"
     }
     failure {
         echo "Deployment Failed ❌"

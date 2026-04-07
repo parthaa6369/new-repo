@@ -1,7 +1,6 @@
 pipeline {
 agent any
 
-```
 environment {
     IMAGE_NAME = "node-nginx-app"
     CONTAINER_NAME = "node-nginx-container"
@@ -49,6 +48,5 @@ post {
         echo "Deployment Failed ❌"
     }
 }
-```
 
 }
